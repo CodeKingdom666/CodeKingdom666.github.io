@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>手动构建GitHub博客 - CodeKingdom</title>
+    <title>极简主义的Web设计哲学 - CodeKingdom</title>
+    <!-- 重要：请将home.html中<style>标签内的全部CSS代码复制到这里 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -107,6 +108,8 @@
         }
     </style>
 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -124,29 +127,36 @@
 
     <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
         <article>
-            <h1 style="font-size:2.5rem; margin-bottom:1rem; color:#f1f5f9;">手动构建GitHub博客：从零到上线</h1>
+            <h1 style="font-size:2.5rem; margin-bottom:1rem; color:#f1f5f9;">极简主义的Web设计哲学</h1>
             <div class="meta" style="margin-bottom: 2rem;">
                 <span><i class="far fa-user"></i> 作者</span>
                 <span><i class="far fa-calendar"></i> 2025-12-2</span>
-                <span><i class="far fa-folder"></i> 技术实践</span>
+                <span><i class="far fa-folder"></i> 设计思考</span>
             </div>
 
             <div style="font-size:1.1rem; color:#94a3b8; line-height:1.8;">
-                <p>在众多静态站点生成器的包围下，我决定回归最原始的方式：用纯HTML和CSS来搭建这个博客。这不仅仅是一个技术选择，更像是一次对Web本质的追溯。</p>
+                <p>在这个信息爆炸的时代，我们的注意力成为了最稀缺的资源。作为回应，极简主义设计不仅仅是一种美学选择，更是一种对用户体验的深刻关怀。它倡导“少即是多”，通过有意识地减少非必要元素，让内容本身成为焦点。</p>
 
-                <h2 style="color:#e2e8f0; margin: 2rem 0 1rem;">为什么选择手动构建？</h2>
-                <p>控制力、学习价值以及对“简单”的追求。每一行代码都由我亲手写下，我知道每一个元素为什么出现在那里。</p>
-
-                <h2 style="color:#e2e8f0; margin: 2rem 0 1rem;">核心步骤回顾</h2>
+                <h2 style="color:#e2e8f0; margin: 2rem 0 1rem;">一、为什么选择深色极简风格？</h2>
+                <p>对于这个以技术思考和写作为主的博客，深色主题与极简主义的结合是经过深思熟虑的：</p>
                 <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                    <li><strong>规划结构：</strong> 确定入口页、主页、文章页的关系。</li>
-                    <li><strong>设计风格：</strong> 采用深色主题，聚焦于代码美学。</li>
-                    <li><strong>编写HTML骨架：</strong> 确保语义化与可访问性。</li>
-                    <li><strong>填充CSS灵魂：</strong> 实现布局、颜色和动画。</li>
-                    <li><strong>部署与迭代：</strong> 推送到GitHub Pages，并根据反馈调整。</li>
+                    <li><strong>减少视觉疲劳：</strong> 长时间阅读时，深色背景能有效降低屏幕眩光，让眼睛更加舒适。</li>
+                    <li><strong>聚焦内容：</strong> 移除了复杂的侧边栏、花哨的动画和无关的小部件后，读者的视线会自然落在文字和代码上。</li>
+                    <li><strong>营造氛围：</strong> 深色系自带专注、沉静和专业的调性，这与博客希望传递的“深度思考”气质相符。</li>
                 </ul>
 
-                <p>这个过程让我重新认识了Web开发的乐趣。它不总是关于框架和工具链，有时，最基础的砖瓦也能筑起令人满意的城堡。</p>
+                <h2 style="color:#e2e8f0; margin: 2rem 0 1rem;">二、极简设计的核心原则</h2>
+                <p>在实践极简主义时，我遵循了几个关键原则：</p>
+                <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                    <li><strong>功能至上：</strong> 每一个保留的UI元素都必须有明确且不可替代的功能。</li>
+                    <li><strong>留白即呼吸：</strong> 慷慨的间距和留白不是浪费空间，而是给内容以呼吸感，提升可读性。</li>
+                    <li><strong>克制用色：</strong> 全站主要使用不超过3种主色，且通过明暗对比来构建层次，而非堆砌颜色。</li>
+                    <li><strong>一致的节奏：</strong> 标题大小、行距、边距都遵循严格的模数，形成和谐统一的视觉节奏。</li>
+                </ol>
+
+                <h2 style="color:#e2e8f0; margin: 2rem 0 1rem;">三、减法带来的挑战与收获</h2>
+                <p>做减法比做加法更难。这意味着要不断拷问自己：这个边框真的需要吗？这个分隔线能否用留白代替？这个动态效果是否对理解内容有帮助？</p>
+                <p>这个过程虽然充满挑战，但收获是巨大的。一个干净、快速的界面不仅让访客更愉悦，也让我作为创作者更专注于生产有价值的内容，而不是无尽地调整外观。最终，设计隐于无形，让位于思想和表达。</p>
             </div>
 
             <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155; text-align: center;">
