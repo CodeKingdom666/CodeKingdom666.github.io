@@ -3,99 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeKingdom - 入口</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <title>CodeKingdom</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background-color: #0a0e17;
-            color: #e6edf3;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f7f4;
+            color: #2c3e50;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
             overflow: hidden;
         }
-        .background {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: -1;
-            opacity: 0.4;
-            background: radial-gradient(circle at 20% 30%, rgba(41, 95, 255, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(156, 76, 255, 0.05) 0%, transparent 50%);
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.5;
         }
-        .main-content {
-            text-align: center;
-            z-index: 1;
-            padding: 2rem;
+
+        h1 em {
+            font-style: normal;
+            color: #2d9c6f;
         }
-        .welcome-text {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 300;
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #7f8c8d;
             margin-bottom: 3rem;
-            line-height: 1.2;
-            background: linear-gradient(90deg, #e6edf3, #7ee787);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            line-height: 1.8;
+            font-weight: 300;
         }
-        .gate-button {
-            display: inline-block;
-            padding: 18px 45px;
-            font-size: 1.3rem;
-            font-family: 'Source Code Pro', monospace;
-            color: #0a0e17;
-            background: linear-gradient(90deg, #7ee787, #57e0a6);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            letter-spacing: 2px;
-            font-weight: 500;
-            box-shadow: 0 0 20px rgba(126, 231, 135, 0.5);
-            transition: all 0.4s ease;
-            margin-top: 1rem;
+
+        /* 分割线 */
+        .divider {
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #5bb98c, #e8a87c);
+            border-radius: 2px;
+            margin: 0 auto 2.5rem;
         }
-        .gate-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 0 35px rgba(126, 231, 135, 0.8);
-            letter-spacing: 3px;
+
+        /* 建设中提示 */
+        .status-text {
+            font-size: 0.95rem;
+            color: #5a9e7a;
+            font-weight: 400;
         }
-        .hint {
-            font-family: 'Source Code Pro', monospace;
-            color: #8b949e;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-        .footer {
+
+        /* 底部页脚 */
+        footer {
             position: absolute;
             bottom: 2rem;
             width: 100%;
             text-align: center;
-            font-family: 'Source Code Pro', monospace;
-            color: #8b949e;
-            font-size: 0.9rem;
+            color: #a0b5a8;
+            font-size: 0.85rem;
+            font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Consolas", "Courier New", monospace;
         }
-        .blog-name { color: #7ee787; }
+        footer span {
+            color: #2d9c6f;
+        }
+
+        /* 背景装饰 */
+        .bg-circle {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.08;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .bg-circle-1 {
+            width: 400px;
+            height: 400px;
+            background: #2d9c6f;
+            top: -100px;
+            right: -100px;
+        }
+        .bg-circle-2 {
+            width: 300px;
+            height: 300px;
+            background: #e8a87c;
+            bottom: -80px;
+            left: -80px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <main class="main-content">
-        <h1 class="welcome-text">欢迎访问我的博客</h1>
-        <a href="home.html" class="gate-button">🚀 打开新世界的大门</a>
-        <p class="hint">点击上方按钮，进入 CodeKingdom 主站</p>
+    <!-- 背景装饰 -->
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+
+    <!-- 主内容 -->
+    <main>
+        <h1>你好，这里是 <em>CodeKingdom</em></h1>
+        <p class="subtitle">记录思考，分享探索，用代码丈量世界</p>
+        <div class="divider"></div>
+        <p class="status-text">博客内容精心筹备 ✨</p>
     </main>
-    <footer class="footer">
-        <span class="blog-name">CodeKingdom</span> 个人博客 · © <span id="currentYear"></span>
+
+    <!-- 页脚 -->
+    <footer>
+        <span>CodeKingdom</span> · 个人博客 · &copy; <span id="currentYear"></span>
     </footer>
+
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        console.log('%c 🏰 入口已加载，等待开启... ', 'background: linear-gradient(90deg, #0a0e17, #1a2332); color: #7ee787; padding: 8px 16px; border-radius: 4px;');
     </script>
 </body>
 </html>
